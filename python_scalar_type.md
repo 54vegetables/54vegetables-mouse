@@ -54,6 +54,7 @@ b = a.replace('string', 'longer string')
 b
 ```
 *输出结果：'this is a longer string'*
+
 操作后，变量a就是不可修改的：
 ```
 a

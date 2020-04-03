@@ -23,27 +23,32 @@ fval2 = 6.78e-5
 3 // 2
 ```
 > 输出结果：1
-
-
+***
 #### 2.3.2.2字符串
-用单引号'或双引号"写一个字符串字面值<br>
-a = 'one way of writing a string'<br>
-b = "another way"<br>
+用单引号'或双引号"写一个字符串字面值
+```
+a = 'one way of writing a string'
+b = "another way"
+```
+含有换行的多行字符串，你可以使用三个单引号'''或三个双引号"""
+```
+c = """
+This is a longer string that
+spans multiple lines
+"""
+```
+可以使用count方法来计算c的回车符：
+```
+c.count('\n')
+```
+> 输出结果：3
+<b>Python的字符串是不可变的，你无法修改一个字符串</b>
+```
+a = 'this is a string'
+a[10] = 'f'
+```
 <br>
-含有换行的多行字符串，你可以使用三个单引号'''或三个双引号"""<br>
-c = """<br>
-This is a longer string that<br>
-spans multiple lines<br>
-"""<br>
-<br
-可以使用count方法来计算c的回车符：<br>
-c.count('\n')<br>
-输出结果：3<br>
-<br>
-<b>Python的字符串是不可变的，你无法修改一个字符串</b><br>
-a = 'this is a string'<br>
-a[10] = 'f'<br>
-结果会出现TypeError异常<br>
+结果会出现TypeError异常
 <br>
 b = a.replace('string', 'longer string')<br>
 b<br>

@@ -42,6 +42,7 @@ spans multiple lines
 c.count('\n')
 ```
 *输出结果：3*<br>
+***
 **Python的字符串是不可变的，你无法修改一个字符串**
 ```
 a = 'this is a string'
@@ -58,31 +59,40 @@ b
 a
 ```
 *输出结果：'this is a string'*
-<br>
-Python对象可以通过str函数转换成字符串：<br>
-a = 5.6<br>
+***
+Python对象可以通过str函数转换成字符串：
+```
+a = 5.6
 s = str(a)<br>
-s<br>
-输出结果：'5.6'<br>
+s
+```
+*输出结果：'5.6'*
+***
+字符串是Unicode字符的序列，因此可以被看作是除了列表和元素的另一种序列：
+```
+s = 'python'
+list(s)
+```
+*输出结果：['p', 'y', 't', 'h', 'o', 'n']*
+**[:3]这种语法被称为切片**，在多种Python序列中都有实现<br>
+```
+s[:3]
+```
+*输出结果：'pyt'*
+***
+反斜杠符号\是一种转义符号，它用来指明特殊符号，比如换行符号\n或Unicode字符。如果要在字符串中写反斜杠则需要将其转义。
+```s = '12\\34'
+print(s)
+```
+*输出结果：12\34*
 <br>
-字符串是Unicode字符的序列，因此可以被看作是除了列表和元素的另一种序列：<br>
-s = 'python'<br>
-list(s)<br>
-输出结果：['p', 'y', 't', 'h', 'o', 'n']<br>
-[:3]这种语法被称为切片，在多种Python序列中都有实现<br>
-s[:3]<br>
-输出结果：'pyt'<br>
-<br>
-反斜杠符号\是一种转义符号，它用来指明特殊符号，比如换行符号\n或Unicode字符。如果要在字符串中写反斜杠则需要将其转义<br>
-s = '12\\34'<br>
-print(s)<br>
-输出结果：12\34<br>
-<br>
-可以在字符串前面加一个前缀符号r，表明这些字符是原生字符<br>
-#&nbsp;r是raw的缩写，表示原生的<br>
-s = r'this \has \no \special \characters'<br>
-s<br>
-输出结果：'this \\has \\no \\special \\characters'<br>
+可以在字符串前面加一个前缀符号r，表明这些字符是原生字符
+```
+# nbsp;r是raw的缩写，表示原生的
+s = r'this \has \no \special \characters'
+s
+```
+*输出结果：'this \\has \\no \\special \\characters'*
 <br>
 将两个字符串结合到一起产生一个新字符串<br>
 a = 'this is the first half '<br>

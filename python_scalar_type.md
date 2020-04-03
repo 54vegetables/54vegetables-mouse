@@ -68,7 +68,7 @@ a
 Python对象可以通过str函数转换成字符串：
 ```python
 a = 5.6
-s = str(a)<br>
+s = str(a)
 s
 ```
 *输出结果：'5.6'*

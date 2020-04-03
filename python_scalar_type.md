@@ -5,19 +5,19 @@ inval = 17239871
 inval ** 6
 ```
 *输出结果：26254519291092456596965462913230729701102721*
-***
+<br>
 浮点数在Python中用float表示，每一个浮点数都是双精度64位数值。它们可以用科学计数法表示：<br>
 ```
 fval = 7.243
 fval2 = 6.78e-5
 ```
-***
+<br>
 整数除法会把结果自动转型为浮点数
 ```
 3 / 2
 ```
 *输出结果：1.5*
-***
+<br>
 如果需要C风格的整数除法（去除了非整数结果的小数部分），可以使用整数除法操作符
 ```
 3 // 2
@@ -92,41 +92,62 @@ print(s)
 s = r'this \has \no \special \characters'
 s
 ```
-*输出结果：'this \\has \\no \\special \\characters'*
-<br>
-将两个字符串结合到一起产生一个新字符串<br>
-a = 'this is the first half '<br>
-b = 'and tjis is the second half'<br>
-a + b<br>
-输出结果：'this is the first half and tjis is the second half'<br>
-字符串对象拥有一个format方法，可以用来代替字符串中的格式化参数，并产生一个新的字符串<br>
-template = '{0:.2f} {1:s} are worth US${2:d}'<br>
-template.format(4.5560, 'Argentine Pesos', 1)<br>
-输出结果：'4.56 Argentine Pesos are worth US$1'<br>
+*输出结果：'this \\\has \\\no \\\special \\\characters'*
+***
+将两个字符串结合到一起产生一个新字符串
+```
+a = 'this is the first half '
+b = 'and tjis is the second half'
+a + b
+```
+*输出结果：'this is the first half and tjis is the second half'*
+***
+字符串对象拥有一个format方法，可以用来代替字符串中的格式化参数，并产生一个新的字符串
+```
+template = '{0:.2f} {1:s} are worth US${2:d}'
+template.format(4.5560, 'Argentine Pesos', 1)
+```
+*输出结果：'4.56 Argentine Pesos are worth US$1'*
 <br>
 #### 2.3.2.3字节与Unicode
-val = "espaol"<br>
-type(val)<br>
-输出结果：str<br>
-val<br>
-输出结果：'espa\ue7c8ol'<br>
-使用encode方法将这个Unicode字符串转换为UTF-8字节：<br>
-val_utf8 = val.encode('utf-8')<br>
-type(val_utf8)<br>
-输出结果：bytes<br>
-val_utf8<br>
-输出结果：b'espa\xee\x9f\x88ol'<br>
-使用decode方法进行解码<br>
-print(val_utf8.decode('utf-8'))<br>
-espaol<br>
+```
+val = "espaol"
+type(val)
+```
+*输出结果：str*
+```
+val
+```
+*输出结果：'espa\ue7c8ol'*
+<br>
+使用encode方法将这个Unicode字符串转换为UTF-8字节：
+```
+val_utf8 = val.encode('utf-8')
+type(val_utf8)
+```
+*输出结果：bytes*
+```
+val_utf8
+```
+*输出结果：b'espa\xee\x9f\x88ol'*
+<br>
+使用decode方法进行解码
+```
+print(val_utf8.decode('utf-8'))
+```
+*输出结果：espaol*
 <br>
 在字节对象中我们并不想让所有的数据都隐式地解码为Unicode字符串,可以在字符串前加前缀b来定义字符文本，尽管可能很少这么做：
-bytes_val = b'this is bytes'<br>
-bytes_val<br>
-输出结果：b'this is bytes'<br>
-decoded = bytes_val.decode('utf-8')<br>
-decoded<br>
-输出结果：'this is bytes'<br>
+```
+bytes_val = b'this is bytes'
+bytes_val
+```
+*输出结果：b'this is bytes'*
+```
+decoded = bytes_val.decode('utf-8')
+decoded
+```
+*输出结果：'this is bytes'*
 <br>
 #### 2.3.2.4  布尔值
 Python中的布尔值写作True或False。比较运算符和其他条件表达式的结果为True或False。布尔值可以与and和or关键字合用。<br>

@@ -86,7 +86,7 @@ s[:3]
 print(s)
 ```
 *输出结果：12\34*
-<br>
+
 可以在字符串前面加一个前缀符号r，表明这些字符是原生字符
 ```
 # nbsp;r是raw的缩写，表示原生的
@@ -109,7 +109,7 @@ template = '{0:.2f} {1:s} are worth US${2:d}'
 template.format(4.5560, 'Argentine Pesos', 1)
 ```
 *输出结果：'4.56 Argentine Pesos are worth US$1'*
-<br>
+
 #### 2.3.2.3字节与Unicode
 ```
 val = "espaol"
@@ -120,7 +120,7 @@ type(val)
 val
 ```
 *输出结果：'espa\ue7c8ol'*
-<br>
+
 使用encode方法将这个Unicode字符串转换为UTF-8字节：
 ```
 val_utf8 = val.encode('utf-8')
@@ -131,13 +131,13 @@ type(val_utf8)
 val_utf8
 ```
 *输出结果：b'espa\xee\x9f\x88ol'*
-<br>
+
 使用decode方法进行解码
 ```
 print(val_utf8.decode('utf-8'))
 ```
 *输出结果：espaol*
-<br>
+
 在字节对象中我们并不想让所有的数据都隐式地解码为Unicode字符串,可以在字符串前加前缀b来定义字符文本，尽管可能很少这么做：
 ```
 bytes_val = b'this is bytes'
@@ -149,7 +149,7 @@ decoded = bytes_val.decode('utf-8')
 decoded
 ```
 *输出结果：'this is bytes'*
-<br>
+
 #### 2.3.2.4  布尔值
 Python中的布尔值写作True或False。比较运算符和其他条件表达式的结果为True或False。布尔值可以与and和or关键字合用。<br>
 True and True<br>

@@ -151,75 +151,134 @@ decoded
 *输出结果：'this is bytes'*
 
 #### 2.3.2.4  布尔值
-Python中的布尔值写作True或False。比较运算符和其他条件表达式的结果为True或False。布尔值可以与and和or关键字合用。<br>
-True and True<br>
-输出结果：True<br>
-False or True<br>
-输出结果：True<br>
-<br>
+Python中的布尔值写作True或False。比较运算符和其他条件表达式的结果为True或False。布尔值可以与and和or关键字合用。
+```
+True and True
+```
+*输出结果：True*
+
+```
+False or True
+```
+*输出结果：True*
+
 #### 2.3.2.5类型转换
-str、bool、int和float既是数据类型，同时也是可以将其他数据转换为这些类型的函数：<br>
-s = '3.14159'<br>
-fval = float(s)<br>
-type(fval)<br>
-输出结果：float<br>
-int(fval)<br>
-输出结果：3<br>
-bool(fval)<br>
-输出结果：True<br>
-bool(0)<br>
-输出结果：False<br>
-<br>
+str、bool、int和float既是数据类型，同时也是可以将其他数据转换为这些类型的函数：
+```
+s = '3.14159'
+fval = float(s)
+type(fval)
+```
+*输出结果：float*
+
+```
+int(fval)
+```
+*输出结果：3*
+
+```
+bool(fval)
+```
+*输出结果：True*
+
+```
+bool(0)
+```
+*输出结果：False*
+
 #### 2.3.2.6  None
-None是Python的null值类型。如果一个函数没有显示地返回值，则它会隐式地返回None:<br>
-a = None<br>
-a is None<br>
-输出结果：True<br>
-b = 5<br>
-b is not None<br>
-输出结果：True<br>
-None还可以作为一个常用的函数参加默认值：<br>
-def add_and_maybe_multiply(a, b, c=None):<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = a + b<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if c is not None:<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = result * c<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return result<br>
-result = add_and_maybe_multiply(1, 2)<br>
-result<br>
-输出结果：3<br>
-result = add_and_maybe_multiply(1, 2, 3)<br>
-result<br>
-输出结果：9<br>
-从技术角度来说，None不仅是一个关键字，它还是NoneType类型的唯一实例：<br>
-type(None)<br>
-输出结果：NoneType<br>
+None是Python的null值类型。如果一个函数没有显示地返回值，则它会隐式地返回None:
+```
+a = None
+a is None
+```
+*输出结果：True*
+
+```
+b = 5
+b is not None
+```
+*输出结果：True*
+
+None还可以作为一个常用的函数参加默认值：
+```
+def add_and_maybe_multiply(a, b, c=None):
+    result = a + b
+    if c is not None:
+        result = result * c
+    return result
+result = add_and_maybe_multiply(1, 2)
+result
+```
+*输出结果：3*
+
+```
+result = add_and_maybe_multiply(1, 2, 3)
+result
+```
+*输出结果：9*
+
+从技术角度来说，None不仅是一个关键字，它还是NoneType类型的唯一实例：
+```
+type(None)
+```
+*输出结果：NoneType*
+
 #### 2.3.2.7  日期和时间
-Python中内建的datetime模块，提供了datetime、data和time类型。<br>
-from datetime import datetime, date, time<br>
-<br>
+Python中内建的datetime模块，提供了datetime、data和time类型。
+```
+from datetime import datetime, date, time
 dt = datetime(2011, 10, 29, 20, 30, 21)<br>
-dt.year<br>
-输出结果：2011<br>
-dt.month<br>
-输出结果：10<br>
-dt.day<br>
-输出结果：29<br>
-dt.hour<br>
-输出结果：20<br>
-dt.minute<br>
-输出结果：30<br>
-dt.second<br>
-输出结果：21<br>
+dt.year
+```
+*输出结果：2011*
+
+```
+dt.month
+```
+*输出结果：10*
+
+```
+dt.day
+```
+*输出结果：29*
+
+```
+dt.hour
+```
+*输出结果：20*
+
+```
+dt.minute
+```
+*输出结果：30*
+
+```
+dt.second
+```
+*输出结果：21*
+
 <br>
-对于datetime实例，可以分别使用date和time方法获取它的date和time对象<br>
-dt.date()<br>
-输出结果：datetime.date(2011, 10, 29)<br>
-dt.time()<br>
-输出结果：datetime.time(20, 30, 21)<br>
-<br>
-strftime将对象转换为字符串<br>
-dt.strftime('%m/%d/%Y %H:%M')<br>
-输出结果：'10/29/2011 20:30'<br>
-strptime将字符串转换为对象<br>
-dt.strptime('20091031', '%Y%m%d')<br>
-输出结果：datetime.datetime(2009, 10, 31, 0, 0)<br>
+对于datetime实例，可以分别使用date和time方法获取它的date和time对象。
+```
+dt.date()
+```
+*输出结果：datetime.date(2011, 10, 29)*
+
+```
+dt.time()
+```
+*输出结果：datetime.time(20, 30, 21)*
+
+***
+strftime将对象转换为字符串
+```
+dt.strftime('%m/%d/%Y %H:%M')
+```
+*输出结果：'10/29/2011 20:30'*
+
+strptime将字符串转换为对象
+```
+dt.strptime('20091031', '%Y%m%d')
+```
+*输出结果：datetime.datetime(2009, 10, 31, 0, 0)*

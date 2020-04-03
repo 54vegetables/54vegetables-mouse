@@ -62,10 +62,9 @@ b
 *输出结果：[1, 2, 3, 4]*
 
 **注意：赋值也被称为绑定。这是因为我们将一个变量名绑定到了一个对象上。已被赋值的变量名有时也会被称为被绑定变量。**
-
 ```python
 def append_element(some_list, element):
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;some_list.append(element)
+    some_list.append(element)
 
 data = [1, 2, 3]
 append_element(data, 4)

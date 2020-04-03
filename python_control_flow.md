@@ -15,8 +15,7 @@ else:
 ```
 *输出结果：<br>
 PLease enter a number: 3<br>
-Positive but smaller than 5
-*
+Positive but smaller than 5*
 
 条件判断是从左到右的并且在and或or两侧的条件会有“短期”现象：
 ```python
